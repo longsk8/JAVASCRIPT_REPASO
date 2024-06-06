@@ -1,0 +1,69 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    /* Set a default font family */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulo__caja {
+    background-image: linear-gradient(135deg, #FFCF71 10%, #2376DD 100%);
+    color: rgb(1, 17, 41);
+    text-align: center;
+    padding: 8px 0;
+    border: 1px solid black;
+}
+
+.titulo__text {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.caja__moneda {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.caja__input {
+    width: 80px 80px;
+  
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+}
+
+.redonda__moneda{
+    color: rgb(1, 17, 41);
+    background-image: linear-gradient(135deg, #FFCF71 10%, #2376DD 100%);
+    text-align: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    margin: 4px 0 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+   
+}
+
+.input__moneda{
+    border-radius: 20px;
+    width: 160px;
+    padding: 5px 0 5px;
+    text-align: center;
+    font-size: large;
+    color: rgb(1, 17, 41);
+    max-width: 300px;
+    outline: none;
+    
+}
+
+.parrafo__input{
+    color: rgb(1, 17, 41);
+    
+}
