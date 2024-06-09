@@ -1,6 +1,6 @@
 function calcularTotal() {
     // Obtener la cantidad de cada moneda
-    let cantidad1 = parseInt(document.getElementById("numero1").value)|| 0;
+    let cantidad1 = parseInt(document.getElementById("numero1").value) || 0;
     let cantidad2 = parseInt(document.getElementById("numero2").value) || 0;
     let cantidad3 = parseInt(document.getElementById("numero3").value) || 0;
     let cantidad4 = parseInt(document.getElementById("numero4").value) || 0;
