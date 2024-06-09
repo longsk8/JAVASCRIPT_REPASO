@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* centrar el botn */
+.caja__cta {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cta {
+    display: block;
+    padding: 15px 50px;
+    border-radius: 30px;
+    color: white;
+    background: blue;
+    border: none;
+    font-size: 15px;
+
+}

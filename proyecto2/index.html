@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludar al usuario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="caja__input">
+        <label class="caja__nombre" for="nombre"> Ingresa tu Nombre</label>
+        <!-- el input tiene que tener un id para poder llamarlo con javscript para recojer los datos -->
+        <input type="text" id="nombreUsuario">
+        <!-- botton con el tipo de accion del usuario para mostrar el texto que escribio el usuario a dar click -->
+        <button onclick="saludarUsuario()" class="cta">Enviar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

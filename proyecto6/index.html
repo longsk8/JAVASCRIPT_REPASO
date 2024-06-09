@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fecha y hora</title>
+</head>
+<body>
+      <div class="caja__reloj">
+        <p class="titulo__reloj">Reloj</p>
+        <p class="hora__reloj" id="textReloj">00:00:00</p>
+      </div>
+
+      <script>
+
+        let elementoTextReloj = document.getElementById("textReloj");
+        let elementoDiaSemana = document.getElementById("diaSemana");
+
+
+        function comenzarReloj(){
+            setInterval(ticTac,1000);
+        }
+
+        function ticTac(){
+            let tiempoActual = new Date();
+            let horaActual = String(tiempoActual.getHours()).padStart(2, "0");
+            let minutoActual = String(tiempoActual.getMinutes()).padStart(2, "0");
+            let segundosActual = String(tiempoActual.getSeconds()).padStart(2,"0");
+          
+
+            let textoHora = horaActual + ":" + minutoActual + ":" + segundosActual;
+            elementoTextReloj.textContent = textoHora;
+    
+        }
+
+        // Llamar a la función comenzarReloj para iniciar el reloj
+        comenzarReloj()
+
+
+      </script>
+</body>
+</html>

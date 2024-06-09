@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar ingresos</title>
+</head>
+
+<body>
+    <p>Ingresa tu nombre</p>
+    <input type="text" name="nombre" id="nombreUsuario">
+    <button onclick="mostrarNombre()">Click</button>
+    <h3 id="salidaTexto">No se tu nombre</h3>
+
+    <script>
+        function mostrarNombre() {
+            let nombre = document.getElementById("nombreUsuario");
+            let texto = document.getElementById("salidaTexto");
+
+            let mensaje = "tu te llamas " + nombre.value;
+
+
+            // cambio el contenido con textContent por lo que ingres el usuario
+            texto.textContent = mensaje;
+
+        }
+    </script>
+</body>
+
+</html>

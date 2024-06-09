@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responde rapido</title>
+</head>
+
+<body onload="comenzarCronometro()">
+
+    <h2>Responde a las preguntas <span id="cuentaRegresiva"></span></h2>
+
+    <p>Cual es la capital de Uruguay?</p>
+    <input type="text" id="respuesta1">
+
+    <p>Cuanto es 2 + 2 (5-10)?</p>
+    <input type="number" id="respuesta2">
+
+    <p>Cual es la capital de Chile?</p>
+    <input type="text" id="respuesta3">
+
+    <p>Cual es la capital de China?</p>
+    <input type="text" id="respuesta4">
+
+    <br></br>
+    <button onclick="finalizado();" id="finalizar">Terminar</button>
+    <br></br>
+    <button onclick="volverIntentar();" id="volverIntentar">Repetir</button>
+
+    <audio id="audioFinal" src="audio.mp3"></audio>
+
+    <script>
+        let tiempoTerminado;
+        let intervaloDeTiempo;
+
+
+        function comenzarCronometro() {
+            // le indicamos a la varibles el tiempo de duracion y descontando cada segundo con la funcion tictac
+            tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+            intervaloDeTiempo = setInterval(ticTac, 1000);
+
+            document.getElementById("cuentaRegresiva").textContent = 30;
+        }
+
+
+        function ticTac() {
+            let tiempo = document.getElementById("cuentaRegresiva").textContent;
+
+            document.getElementById("cuentaRegresiva").textContent = tiempo - 1;
+        }
+
+        function tiempoCumplido() {
+            clearInterval(intervaloDeTiempo);
+            document.getElementById("cuentaRegresiva").textContent = 0;
+            document.getElementById("audioFinal").play();
+            alert("game OVER");
+        }
+
+        // funcion finalizar del boton
+        function finalizado() {
+            clearTimeout(tiempoTerminado);
+            clearInterval(intervaloDeTiempo);
+
+
+            let fecha = new Date();//enseñar la fecha
+            let respuesta1 = document.getElementById("respuesta1").value;
+            let respuesta2 = document.getElementById("respuesta2").value;
+            let respuesta3 = document.getElementById("respuesta3").value;
+            let respuesta4 = document.getElementById("respuesta4").value;
+
+            //muestro en mesaje en un alert
+            let mensaje = fecha.toDateString("es-ES") + "\n" +
+                "1" + respuesta1 + "\n" +
+                "2" + respuesta2 + "\n" +
+                "3" + respuesta3 + "\n" +
+                "4" + respuesta4 + "\n";
+
+            alert(mensaje);
+
+        }
+
+        //funcion volver a intenerar
+        function volverIntentar() {
+            location.reload();//actualiza la pagina
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.caja__input{
+    margin-top: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
+
+.caja__nombre{
+    text-align: center;
+    color: rgb(19, 19, 19);
+    font-weight: 500;
+    font-size: large;
+}

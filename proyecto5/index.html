@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+</head>
+
+<body>
+
+    <label for="text">Intrusca los segundos</label>
+    <input type="number" id="numeroSegundos">
+    <button onclick="activarAlarma()">Alarma</button>
+    <h3 id="textoAlarma"></h3>
+
+    <script>
+        let cantidadSegundos = document.getElementById("numeroSegundos");
+
+        let newText = document.getElementById("textoAlarma");
+
+        function activarAlarma() {
+            setTimeout(tiempoCumplido, 1000 * cantidadSegundos.value);
+        }
+
+        function tiempoCumplido() {
+            newText.textContent = ("fin del contador");
+            // cambiamso el estilo
+            newText.style.color = "red";
+
+        }
+    </script>
+</body>
+
+</html>
