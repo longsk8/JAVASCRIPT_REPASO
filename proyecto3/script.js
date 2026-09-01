@@ -65,9 +65,7 @@ let miPerro = { raza: 'podenco', nombre: 'Luna', color: 'marrón' };
 let num1 = 12;
 let num2 = 99;
 let numer3 = num1 + num2;
-console.log(numer3
-
-)
+console.log(numer3)
 // Declarar el array frutas
 let frutas = ['manzanas', 'bananas', 'naranjas'];
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>suma</title>
+</head>
+
+<body>
+    <h3>Suma</h3>
+    <p>Primer Numero</p>
+    <input type="number" id="primerNumero">
+    <p>Segundo Numero</p>
+    <input type="number" id="segundoNumero">
+    <!-- llamo a la funcion mostrarResulto -->
+    <button onclick="mostrarResultado()">sumar</button>
+    <p id="mostrarResultado">Resultado</p>
+
+    <script>
+
+        function sumar(numero1, numero2) {
+            //parseFloat que el usuario pueda poner numero decimales y enteros
+            resultado = parseFloat(numero1) + parseFloat(numero2);
+            return resultado;
+        }
+
+        // funcion donde muestro la suma en el html
+        function mostrarResultado() {
+            //creo variables para los elemento del html
+            let elementoNumero1 = document.getElementById('primerNumero');
+            let elementoNumero2 = document.getElementById('segundoNumero');
+            let elementoTexto = document.getElementById('mostrarResultado');
+
+            //llamo a la funcion sumar para calcular la suma
+            let elementoSuma = sumar(elementoNumero1.value, elementoNumero2.value);
+
+            // Mostrar el resultado en el párrafo
+            elementoTexto.textContent = 'Resultado ' + elementoSuma;
+        }
+    </script>
+
+</body>
+
+</html>
